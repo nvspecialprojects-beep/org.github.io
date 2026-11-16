@@ -1,0 +1,118 @@
+
+        /* --- Table Rows & Cells --- */
+        .data-table td {
+            padding: 16px 20px;
+            border-bottom: 1px solid #e2e8f0;
+            color: #334155;
+            vertical-align: middle;
+        }
+
+        /* Zebra Striping: Style every second row with a subtle alternative gray tint */
+        .data-table tbody tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+
+        /* Highlight Row on Mouse Hover */
+        .data-table tbody tr:hover {
+            background-color: #f1f5f9;
+            transition: background-color 0.2s ease;
+        }
+
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+ <!-- SIDEBAR MENU -->
+    <nav class="sidebar">
+        <div class="sidebar-brand"><span>Special Project<br></span>
+                                  <span>Ninja van XB</span></div>
+        <ul class="sidebar-menu">
+            <li><a href="dashboard.html"><span>Dashboard</span></a></li>
+            <li><a href="shipment.html"><span>Shipment</span></a></li>
+            <li><a href="dispatched.html"><span>Dispatched</span></a></li>
+            <li><a href="pending.html"><span>Pending</span></a></li>
+            <li><a href="#"><span>Reports</span></a></li>
+            <li><a href="#"><span>Supplies</span></a></li>
+        </ul>
+    </nav>
+      <!-- Responsive Main Container -->
+    <main class="main-content">
+    <div class="table-responsive">
+      <!-- Container Header -->
+        <thead>
+            <input type="search-bar" id="search-bar" name="search-bar"><button class="search-btn">Search</button>
+            <button id="formToggleBtn" class="btn-add">
+                <span class="btn-add-action">Add Shipment</span></button>
+        </thead>
+        <!-- Table -->
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>MAWB: #</th>
+                    <th>Account</th>
+                    <th>Time of Arrival</th>
+                    <th>No. of Pcs</th>
+                    <th>Special Instructions</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            
+        </table>
+    </div>
+
+    <!-- Floating Form for ADD SHIPMENT -->
+    <div id="floatingForm" class="signup-container">
+    <h2>Add Shipment</h2>
+    <form action="#" method="POST">
+      <!-- MAWB # -->
+      <div class="input-group">
+        <label for="mawb">Mawb # <h6>(Master Airwaybill)</h6></label>
+        <input type="text" id="mawb" name="mawb" placeholder=""required>
+      </div>
+
+      <!-- Account List -->
+      <div class="input-group">
+        <label for="account">Account</label>
+          <select>
+            <option value=""></option>
+            <option value="electronics">CNPH</option>
+            <option value="furniture">Lazada DVO</option>
+            <option value="apparel">Cebu J&T</option>
+            <option value="apparel">JNT DVO</option>
+            <option value="apparel">IHERB</option>
+            <option value="apparel">NIKE</option>
+          </select>
+      </div>
+
+      <!-- Time of Arrival -->
+      <div class="input-group">
+        <label for="time-arrival">Time of Arrival</label>
+        <input type="time" id="time-arrival" name="time-arrival" placeholder="" minlength="8" required>
+      </div>
+
+      <!-- Number of Pcs -->
+      <div class="input-group">
+        <label for="no-of-pcs">No. of Pc's</label>
+        <input type="number" id="no-of-pcs" name="no-of-pcs" placeholder="" required>
+      </div>
+      <div class="input-group">
+        <label for="special-instructions">Special Instructions</label>
+        <input type="text" id="spec-instructions" name="spec-instructions" placeholder="" required>
+      </div>
+
+      <!-- Create Button -->
+      <button type="submit" class="create-btn">Create</button>
+    </form>
+  </div>
+</main>
+</body>
+<script src="script.js"></script>
+</html>
+    
+        
