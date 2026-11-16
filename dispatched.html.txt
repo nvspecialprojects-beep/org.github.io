@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+ <!-- SIDEBAR NAV -->
+    <nav class="sidebar">
+        <div class="sidebar-brand"><span>Special Project<br></span>
+                                  <span>Ninja van XB</span></div>
+        <ul class="sidebar-menu">
+            <li><a href="dashboard.html"><span>Dashboard</span></a></li>
+            <li><a href="shipment.html"><span>Shipment</span></a></li>
+            <li><a href="dispatched.html"><span>Dispatched</span></a></li>
+            <li><a href="pending.html"><span>Pending</span></a></li>
+            <li><a href="#"><span>Reports</span></a></li>
+            <li><a href="#"><span>Supplies</span></a></li>
+        </ul>
+    </nav>
+    <main class="main-content">
+    <!-- Responsive Container Structure -->
+    <div class="table-responsive">
+        <thead>
+            <input type="search-bar" id="search-bar" name="search-bar"><button class="search-btn">Search</button>
+        </thead>
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>MAWB: #</th>
+                    <th>Account</th>
+                    <th>Time of Arrival</th>
+                    <th>No. of Pcs</th>
+                    <th>Special Instructions</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            
+        </table>
+    </div>
+</main>
+</body>
+</html>
+    
+        
+        
